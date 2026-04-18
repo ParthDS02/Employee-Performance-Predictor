@@ -55,43 +55,6 @@ Developed an end-to-end Machine Learning web application utilizing a **Random Fo
 ### Predictive Decision Tree
 ![Decision Logic](Assets/Logical%20Flow%20Diagram.png)
 
-<details>
-<summary>Click to view interactive Mermaid diagram</summary>
-
-```mermaid
-graph TD
-    %% Styling
-    classDef offline fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
-    classDef cloud fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px;
-    classDef user fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
-
-    subgraph Offline ML Pipeline (Local Machine)
-        A[Generate 30K Row Dataset<br>w/ HR Patterns] -->|Train/Test Split| B(Random Forest<br>Classifier)
-        B -->|n_estimators=30<br>max_depth=12| C{Save Assets}
-        C -->|Serialize| D[model.pkl]
-        C -->|Serialize| E[scaler_new.pkl]
-    end
-
-    subgraph Production Deployment (Cloud)
-        D -.->|Loads via cache| F(app.py - Streamlit)
-        E -.->|Loads via cache| F
-        F --> G{Prediction Engine}
-        G -->|Probability Array| H[Dynamic Insights UI<br>Bar Chart & Explanations]
-    end
-
-    subgraph User Interaction
-        I((HR Manager)) -->|Inputs 6 Metrics| F
-        H -->|Renders Results| I
-    end
-
-    %% Apply Classes
-    class A,B,C,D,E offline;
-    class F,G,H cloud;
-    class I user;
-```
-</details>
-<p align="right"><i>Created by <b>Parth B Mistry</b></i></p>
-
 ---
 
 ## 9. Future Add-ons
