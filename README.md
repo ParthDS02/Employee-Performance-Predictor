@@ -4,7 +4,8 @@
 
 **Domain:** HR Analytics & Machine Learning  
 **Project Status:** 🟢 Completed  
-**Live App Link:** *[Insert your Streamlit/HuggingFace link here after deploying]*  
+**Live App Link:**  
+[Employee Performance Predictor App](https://employee-performance-predictor-22insze2djbebkrnjxahzc.streamlit.app/)  
 
 ---
 
